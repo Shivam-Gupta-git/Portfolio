@@ -1,0 +1,88 @@
+body{
+  background-color: black;
+}
+.mac-glow-text {
+  letter-spacing: -1px;
+  
+  /* Gradient background */
+  background: linear-gradient(
+    160deg,
+    #dd2d33,
+    #eeb61e,
+    #c8b6ff,
+    #40eeda
+  );
+
+  /* Standard property for compatibility */
+  background-clip: text;
+
+  /* Vendor-prefixed version for WebKit browsers */
+  -webkit-background-clip: text;
+
+  /* Makes the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+
+  /* Soft glow */
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.35),
+    0 0 25px rgba(155, 226, 255, 0.2),
+    0 0 50px rgba(200, 182, 255, 0.15);
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+.marquee-track {
+  display: inline-flex;
+  animation: scrollText 15s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  display: inline-flex;
+  gap: 30px; /* spacing between words, adjust as needed */
+}
+
+@media (min-width: 375px) {
+  .marquee-item {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 640px) {
+  .marquee-item {
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-item {
+    gap: 80px;
+  }
+}
+
+.software-container{
+  margin-top: 30px;
+}
+.software-container-box-shadow{
+  box-shadow:
+  inset 0 4px 4px rgba(0, 0, 0, 0.139),
+  inset 0 -4px 4px rgba(0, 0, 0, 0.302);
+
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+/* global.css or your component CSS */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
