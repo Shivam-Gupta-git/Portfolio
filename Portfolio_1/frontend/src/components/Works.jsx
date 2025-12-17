@@ -98,6 +98,12 @@ const Works = () => {
                       src={item.url} 
                       alt={item.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      crossOrigin="anonymous"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect fill="%23374151" width="400" height="300"/><text fill="%239CA3AF" font-size="14" x="50%" y="50%" text-anchor="middle">Image not available</text></svg>';
+                      }}
                     />
                   )}
                   <span className="absolute top-2 right-2 px-2 py-0.5 bg-black/60 rounded text-[10px] sm:text-xs uppercase">
@@ -143,7 +149,17 @@ const Works = () => {
                   <video src={selectedItem.url} className="w-full h-full" controls autoPlay />
                 )
               ) : (
-                <img src={selectedItem.url} alt={selectedItem.title} className="w-full h-full object-contain" />
+                <img 
+                  src={selectedItem.url} 
+                  alt={selectedItem.title} 
+                  className="w-full h-full object-contain"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect fill="%23374151" width="400" height="300"/><text fill="%239CA3AF" font-size="14" x="50%" y="50%" text-anchor="middle">Image not available</text></svg>';
+                  }}
+                />
               )}
             </div>
             
