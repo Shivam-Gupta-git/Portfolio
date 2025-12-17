@@ -6,6 +6,7 @@ import About from './components/About'
 import Works from './components/Works'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Admin from './pages/Admin'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Work' element={<Works/>}></Route>
         <Route path='/About' element={<About/>}></Route>
         <Route path='/Contact' element={<Contact/>}></Route>
+        <Route path='/admin' element={<Admin/>}></Route>
       </Routes>
      <Footer></Footer>
     </div>

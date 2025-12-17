@@ -54,6 +54,13 @@ function Particles({ count = 200, isMobile = false }) {
 function Mack() {
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
+  const [homeSettings, setHomeSettings] = useState({
+    // resumeUrl: "",
+    heroTitle: "Hi, I'm Ritu Kumari",
+    heroSubtitle: "I'm a creative video editor and 3D artist",
+    heroDescription:
+      "who specializes in crafting cinematic visuals, realistic 3D models, and engaging motion stories.",
+  });
 
   useEffect(() => {
     const checkMobile = () => {
@@ -66,6 +73,14 @@ function Mack() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Load home settings from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("homeSettings");
+    if (saved) {
+      setHomeSettings(JSON.parse(saved));
+    }
+  }, []);
+
   // Responsive camera settings
   const cameraFov = isMobile ? 20 : window.innerWidth < 1024 ? 15 : 12;
   const cameraPosition = isMobile
@@ -74,21 +89,28 @@ function Mack() {
     ? [0, -4, 180]
     : [0, -5, 220];
 
+  // const handleDownloadResume = () => {
+  //   if (homeSettings.resumeUrl) {
+  //     window.open(homeSettings.resumeUrl, "_blank");
+  //   } else {
+  //     alert("Resume not available yet");
+  //   }
+  // };
+
   return (
     <>
       <div className="w-full h-screen relative ">
         {/* Text overlay */}
         <div className="w-full absolute flex flex-col items-center text-white top-18 sm:top-10 md:top-20 left-1/2 -translate-x-1/2 font-['Halvetica_Now_Display'] px-4 sm:px-6 z-10">
           <h3 className="mac-glow-text text-3xl xs:text-5xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter font-bold text-center leading-tight">
-            Hi, I'm Ritu Kumari
+            {homeSettings.heroTitle}
           </h3>
           <div className="w-full sm:w-[90%] md:w-[75%] max-w-2xl mt-2 sm:mt-3">
             <h5 className="text-xs sm:text-sm md:text-base lg:text-lg text-center leading-relaxed">
-              I'm a creative video editor and 3D artist
+              {homeSettings.heroSubtitle}
             </h5>
             <p className="text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] text-center mt-2 sm:mt-2 leading-relaxed px-2">
-              who specializes in crafting cinematic visuals, realistic 3D
-              models, and engaging motion stories.
+              {homeSettings.heroDescription}
             </p>
           </div>
         </div>
