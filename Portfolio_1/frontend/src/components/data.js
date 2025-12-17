@@ -26,48 +26,10 @@ export const softwareLogo = [
     image3: "/images/premiere-pro.png",
     image4: "/images/after-effects.png",
     image5: "/images/cdr.png",
-
     heading1: "ADOBE ILLUSTRATOR",
     heading2: "ADOBE PHOTOSHOP",
     heading3: "PREMIERE PRO",
     heading4: "AFTER EFFECT",
     heading5: "COREL DRAW",
   },
-];
-
-// Portfolio work items for Works page
-export const portfolioItems = [
-  {
-    id: "1",
-    title: "Photoshop Work 1",
-    description: "Creative photo manipulation",
-    url: "/images/photoShop1.jpeg",
-    type: "image",
-    category: "photoshop",
-  },
-  {
-    id: "2",
-    title: "Photoshop Work 2",
-    description: "Photo editing project",
-    url: "/images/photoshop2.jpeg",
-    type: "image",
-    category: "photoshop",
-  },
-  {
-    id: "3",
-    title: "Illustrator Work 1",
-    description: "Vector illustration",
-    url: "/images/Illustrator1.jpeg",
-    type: "image",
-    category: "illustrator",
-  },
-  {
-    id: "4",
-    title: "Illustrator Work 2",
-    description: "Graphic design project",
-    url: "/images/Illustrator2.jpeg",
-    type: "image",
-    category: "illustrator",
-  },
-  // Add more items here as needed
 ];
