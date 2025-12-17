@@ -14,7 +14,7 @@ function MacContainerMobile() {
     const handleScroll = () => {
       const scrollTop = window.scrollY
       const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = Math.min(scrollTop / (docHeight * 0.3), 1) // Use first 30% of page scroll
+      const progress = Math.min(scrollTop / (docHeight * 0.1), 1) // Use first 30% of page scroll
       setScrollProgress(progress)
     }
 
