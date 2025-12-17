@@ -5,11 +5,41 @@ const Works = () => {
   const [activeCategory, setActiveCategory] = useState('all')
   const [selectedItem, setSelectedItem] = useState(null)
 
+  // Default demo items (shown if no localStorage data)
+  const defaultItems = [
+    {
+      id: 'demo1',
+      title: 'Sample Work 1',
+      description: 'Add your work through the admin panel',
+      url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800',
+      type: 'image',
+      category: 'photoshop'
+    },
+    {
+      id: 'demo2', 
+      title: 'Sample Work 2',
+      description: 'Add your work through the admin panel',
+      url: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800',
+      type: 'image',
+      category: 'illustrator'
+    },
+    {
+      id: 'demo3',
+      title: 'Sample Work 3', 
+      description: 'Add your work through the admin panel',
+      url: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800',
+      type: 'image',
+      category: '3d'
+    }
+  ]
+
   // Load from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('portfolioMedia')
-    if (saved) {
+    if (saved && JSON.parse(saved).length > 0) {
       setMediaItems(JSON.parse(saved))
+    } else {
+      setMediaItems(defaultItems)
     }
   }, [])
 
