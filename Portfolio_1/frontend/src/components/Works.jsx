@@ -27,7 +27,7 @@ const Works = () => {
     : mediaItems.filter(item => item.category === activeCategory)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen  from-gray-900 to-black text-white">
       {/* Header */}
       <div className="pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 px-4 sm:px-6 md:px-8 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
