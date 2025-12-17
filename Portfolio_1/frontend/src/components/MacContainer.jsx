@@ -49,7 +49,9 @@ function MacContainer() {
 
   useFrame((state, delta) => {
     if (meshes.screen && data) {
-      meshes.screen.rotation.x = THREE.MathUtils.degToRad(180 - data.offset * 90)
+      // Ensure offset is being read correctly
+      const offset = data.offset || 0
+      meshes.screen.rotation.x = THREE.MathUtils.degToRad(180 - offset * 90)
     }
   })
 
