@@ -125,7 +125,7 @@ const Admin = () => {
   // Login Screen
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black flex items-center justify-center p-4">
+      <div className="min-h-screen  from-gray-900 to-black flex items-center justify-center p-4">
         <div className="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl w-full max-w-md">
           <h1 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6">Admin Login</h1>
           
@@ -159,7 +159,7 @@ const Admin = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen  from-gray-900 to-black text-white p-4 sm:p-6 md:p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
