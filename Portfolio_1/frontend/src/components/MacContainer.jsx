@@ -23,11 +23,11 @@ function MacContainer() {
   const meshes = useMemo(() => {
     const meshMap = {}
     if (model?.scene) {
-      model.scene.traverse((e) => {
+  model.scene.traverse((e) => {
         if (e.name) {
           meshMap[e.name] = e
         }
-      })
+  })
     }
     return meshMap
   }, [model])
@@ -35,14 +35,14 @@ function MacContainer() {
   // Initialize mesh properties once when component mounts or meshes change
   useEffect(() => {
     if (meshes.screen) {
-      meshes.screen.rotation.x = THREE.MathUtils.degToRad(180)
+  meshes.screen.rotation.x = THREE.MathUtils.degToRad(180)
     }
-    
+   
     if (meshes.matte && meshes.matte.material) {
-      meshes.matte.material.map = image
-      meshes.matte.material.emissiveIntensity = 0
-      meshes.matte.material.metalness = 0
-      meshes.matte.material.roughness = 1
+  meshes.matte.material.map = image
+  meshes.matte.material.emissiveIntensity = 0
+  meshes.matte.material.metalness = 0
+  meshes.matte.material.roughness = 1
       meshes.matte.material.needsUpdate = true
     }
   }, [meshes, image])

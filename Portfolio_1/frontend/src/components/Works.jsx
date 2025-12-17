@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { portfolioItems } from './data'
 
 const Works = () => {
   const [mediaItems, setMediaItems] = useState([])
   const [activeCategory, setActiveCategory] = useState('all')
   const [selectedItem, setSelectedItem] = useState(null)
 
-  // Load items - use data.js as base, merge with localStorage additions
+  // Load items from localStorage only (added via admin panel)
   useEffect(() => {
     const saved = localStorage.getItem('portfolioMedia')
-    if (saved && JSON.parse(saved).length > 0) {
-      // Merge: data.js items + localStorage items
-      const localItems = JSON.parse(saved)
-      const merged = [...portfolioItems, ...localItems]
-      setMediaItems(merged)
-    } else {
-      // Use only data.js items
-      setMediaItems(portfolioItems)
+    if (saved) {
+      setMediaItems(JSON.parse(saved))
     }
   }, [])
 
