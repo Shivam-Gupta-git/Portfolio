@@ -91,7 +91,7 @@ function Mack() {
           <Particles count={isMobile ? 150 : 300} isMobile={isMobile} />
 
           {/* Scrollable 3D Content */}
-          <ScrollControls pages={1}>
+          <ScrollControls pages={isMobile ? 1.5 : 1} damping={isMobile ? 0.15 : 0.25}>
             <MacContainer />
           </ScrollControls>
         </Canvas>
