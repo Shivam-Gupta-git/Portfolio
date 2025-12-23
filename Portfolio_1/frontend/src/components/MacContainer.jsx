@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 function MacContainer() {
   const model = useGLTF("./mac.glb")
-  const image = useTexture('./image3.webp')
+  const image = useTexture('./laptopScreen.jpeg')
   const data = useScroll()
   const [isMobile, setIsMobile] = useState(false)
 
