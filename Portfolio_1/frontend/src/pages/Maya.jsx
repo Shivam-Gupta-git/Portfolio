@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { photoShopData } from "../components/data";
+import { mayaData } from "../components/data"
 import { MdCancel } from "react-icons/md";
 
 function Photoshop() {
@@ -18,7 +19,7 @@ function Photoshop() {
 
   return (
     <div className="w-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] flex flex-col gap-4 sm:gap-6 p-3 sm:p-4 md:p-6">
-    {photoShopData.map((item, index) => {
+    {mayaData.map((item, index) => {
       const images = [
         item.image1,
         item.image2,
@@ -26,6 +27,8 @@ function Photoshop() {
         item.image4,
         item.image5,
         item.image6,
+        item.image7,
+        item.image8,
       ];
   
       return (

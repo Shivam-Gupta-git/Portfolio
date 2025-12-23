@@ -4,16 +4,16 @@ const Carousel = () => {
   // Each box now has: { title, image, link }
   const sections = [
     [
-      { title: "Project 1", image: "/images/project1.jpg", link: "https://example.com/1" },
-      { title: "Project 2", image: "/images/project2.jpg", link: "https://example.com/2" },
-      { title: "Project 3", image: "/images/project3.jpg", link: "https://example.com/3" },
-      { title: "Project 4", image: "/images/project4.jpg", link: "https://example.com/4" },
+      { title: "Maya", image: "/images/maya2.jpeg", link: "#" },
+      { title: "Photoshop", image: "/images/photoshop5.jpeg", link: "#" },
+      { title: "Photoshop", image: "/images/photoshop6.jpeg", link: "#" },
+      { title: "Maya", image: "/images/maya3.jpeg", link: "#" },
     ],
     [
-      { title: "Project 5", image: "/images/project5.jpg", link: "https://example.com/5" },
-      { title: "Project 6", image: "/images/project6.jpg", link: "https://example.com/6" },
-      { title: "Project 7", image: "/images/project7.jpg", link: "https://example.com/7" },
-      { title: "Project 8", image: "/images/project8.jpg", link: "https://example.com/8" },
+      { title: "Illustrator", image: "/images/Illustrator4.jpeg", link: "#" },
+      { title: "Illustrator", image: "/images/Illustrator2.jpeg", link: "#" },
+      { title: "Photoshop", image: "/images/photoShop1.jpeg", link: "#" },
+      { title: "Maya", image: "/images/maya7.jpeg", link: "#" },
     ],
   ];
 

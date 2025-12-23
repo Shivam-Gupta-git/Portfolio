@@ -4,7 +4,7 @@ import Photoshop from "../pages/Photoshop";
 import Illustrator from "../pages/Illustrator";
 import PremierePro from "../pages/PremierePro";
 import AfterEffects from "../pages/AfterEffects";
-import CorelDraw from "../pages/CorelDraw";
+import Maya from "../pages/Maya";
 
 function ImageCards() {
   const [activeTab, setActiveTab] = useState("photoshop");
@@ -21,7 +21,7 @@ function ImageCards() {
       case "after-effects":
         return <AfterEffects />;
       case "corel-draw":
-        return <CorelDraw />;
+        return <Maya/>;
       default:
         return <Photoshop />;
     }

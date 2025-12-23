@@ -19,6 +19,33 @@ export const illustratorData = [
   },
 ];
 
+export const mayaData = [
+  {
+    image1: "/images/maya1.jpeg",
+    image2: "/images/maya2.jpeg",
+    image3: "/images/maya3.jpeg",
+    image4: "/images/maya4.jpeg",
+    image5: "/images/maya5.jpeg",
+    image6: "/images/maya6.jpeg",
+    image7: "/images/maya7.jpeg",
+    image8: "/images/maya8.jpeg",
+  }
+]
+
+
+export const carouserData = [
+  {
+    image1: "/images/maya2.jpeg",
+    image2: "/images/photoshop5.jpeg",
+    image3: "/images/photoshop6.jpeg",
+    image4: "/images/maya3.jpeg",
+    image5: "/images/Illustrator4.jpeg",
+    image6: "/images/Illustrator2.jpeg",
+    image7: "/images/photoShop1.jpeg",
+    image8: "/images/maya7.jpeg" 
+  }
+]
+
 export const softwareLogo = [
   {
     image1: "/images/illustrator.png",

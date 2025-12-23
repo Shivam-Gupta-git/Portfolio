@@ -35,7 +35,7 @@ function CreativeNav({ activeTab, setActiveTab }) {
         <button 
           onClick={() => handleClick('corel-draw')}
           className={`${activeTab === 'corel-draw' ? 'bg-white/20 text-white' : 'bg-transparent'} text-gray-500 px-2.5 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 rounded-full text-[7px] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] cursor-pointer transition-all whitespace-nowrap`}>
-          Corel Draw
+          Maya
         </button>
       </div>
     </div>
