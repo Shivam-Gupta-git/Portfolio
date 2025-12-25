@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function RollingText() {
   const skills = [
@@ -32,9 +32,9 @@ function RollingText() {
   };
 
   return (
-    <div className="w-full overflow-hidden relative -mt-3 sm:-mt-5 z-20 flex flex-col items-center justify-center py-3 sm:py-4 md:py-6">
+    <div className=" w-full overflow-hidden relative -mt-3 sm:-mt-5 z-20 flex flex-col items-center justify-center py-3 sm:py-4 md:py-6">
       <div className="w-[98%] sm:w-[95%] md:w-[90%] overflow-hidden flex items-center ">
-        
+ 
         <div className="marquee-track">
           
           {/* 1st copy */}
@@ -63,7 +63,7 @@ function RollingText() {
         </div>
 
       </div>
-      <div className="w-[90%] mt-3">
+      <div className="w-[90%] mt-3" >
           {/* Resume Download Button */}
             <button
             onClick={handleDownloadResume}
